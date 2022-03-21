@@ -258,6 +258,7 @@ public class ImplementationJavaAlgorithmesTris
 
                 System.out.println("##### Temps d'execution tri rapide #####");
                 n = table.length - 2;
+                initialisation();
                 tempsDebut  = System.currentTimeMillis();
                 triRapide ( 1,n );
                 tempsFin = System.currentTimeMillis();
@@ -265,6 +266,7 @@ public class ImplementationJavaAlgorithmesTris
                 System.out.println("Operation Effectuée en: " + Double.toString(seconds) + " secondes.\n");
 
                 System.out.println("##### Temps d'execution tri fusion #####");
+                initialisation();
                 tempsDebut  = System.currentTimeMillis();
                 triFusion();
                 tempsFin = System.currentTimeMillis();
@@ -272,6 +274,7 @@ public class ImplementationJavaAlgorithmesTris
                 System.out.println("Operation Effectuée en: " + Double.toString(seconds) + " secondes.\n");
 
                 System.out.println("##### Temps d'execution tri insertion #####");
+                initialisation();
                 tempsDebut  = System.currentTimeMillis();
                 triInsertion();
                 tempsFin = System.currentTimeMillis();
@@ -279,6 +282,7 @@ public class ImplementationJavaAlgorithmesTris
                 System.out.println("Operation Effectuée en: " + Double.toString(seconds) + " secondes.\n");
 
                 System.out.println("##### Temps d'execution tri selection #####");
+                initialisation();
                 tempsDebut  = System.currentTimeMillis();
                 triSelection();
                 tempsFin = System.currentTimeMillis();
@@ -286,6 +290,7 @@ public class ImplementationJavaAlgorithmesTris
                 System.out.println("Operation Effectuée en: " + Double.toString(seconds) + " secondes.\n");
 
                 System.out.println("##### Temps d'execution tri bulle #####");
+                initialisation();
                 tempsDebut  = System.currentTimeMillis();
                 triBulle();
                 tempsFin = System.currentTimeMillis();
