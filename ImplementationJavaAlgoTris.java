@@ -3,9 +3,13 @@ import java.util.Scanner;
 public class ImplementationJavaAlgorithmesTris
 {
     static  float [] table  =  new  float [10000]  ;  // le tableau à trier en attribut
- 
+ /*  Les cellules [0] et [20] contiennent des sentinelles,
+     Les cellules utiles vont de 1 è 19, (de 1 à table.length-2)
+ */
+
     static void  affichage  ( )
     {
+        // Affichage sans les sentinelles
         int  n  =  table.length - 2 ;
         for (  int  i  =  1 ;  i <= n ;  i ++ )
             System.out.print ( table[i] + " , ");
@@ -23,6 +27,7 @@ public class ImplementationJavaAlgorithmesTris
         table[n + 1]  =  Integer.MAX_VALUE ;
     }
 
+    // ----> Tri rapide :
 
     /* ########## TRI RAPIDE ########## */
 
@@ -198,15 +203,19 @@ public class ImplementationJavaAlgorithmesTris
         System.out.println("Pour le tri insertion, taper 3: ");
         System.out.println("Pour le tri selection, taper 4: ");
         System.out.println("Pour le tri bulle, taper 5: ");
-        System.out.println("Pour le temps d'execution de chaque tri, taper 2022: \n");
+        System.out.println("Pour le temps d'execution de chaque tri, taper 2022:");
+        System.out.println("Pour sortir du programme, taper 0: \n");
 
         Scanner sc = new Scanner(System.in);
-        System.out.print("Saisir un numero: \n");
-        int methode = sc.nextInt();
+        System.out.print("Saisir un numero: ");
+        String methode = sc.next();
+        System.out.print("\n");
 
         switch (methode)
         {
-            case 1:
+            case "0":
+                break;
+            case "1":
                 System.out.println("\n##### TRI RAPIDE #####\n");
                 initialisation  ( );
                 System.out.println ("Tableau initial :");
@@ -216,7 +225,7 @@ public class ImplementationJavaAlgorithmesTris
                 System.out.println ("Tableau une fois trié :");
                 affichage  ( );
                 break;
-            case 2:
+            case "2":
                 System.out.println("\n##### TRI FUSION #####\n");
                 initialisation  ( );
                 System.out.println ("Tableau initial :");
@@ -225,7 +234,7 @@ public class ImplementationJavaAlgorithmesTris
                 System.out.println ("Tableau une fois trié :");
                 affichage  ( );
                 break;
-            case 3:
+            case "3":
                 System.out.println("\n##### TRI INSERTION #####\n");
                 initialisation  ( );
                 System.out.println ("Tableau initial :");
@@ -234,7 +243,7 @@ public class ImplementationJavaAlgorithmesTris
                 System.out.println ("Tableau une fois trié :");
                 affichage  ( );
                 break;
-            case 4:
+            case "4":
                 System.out.println("\n##### TRI SELECTION #####\n");
                 initialisation  ( );
                 System.out.println ("Tableau initial :");
@@ -243,7 +252,7 @@ public class ImplementationJavaAlgorithmesTris
                 System.out.println ("Tableau une fois trié :");
                 affichage  ( );
                 break;
-            case 5:
+            case "5":
                 System.out.println("\n##### TRI BULLE #####\n");
                 initialisation  ( );
                 System.out.println ("Tableau initial :");
@@ -252,7 +261,7 @@ public class ImplementationJavaAlgorithmesTris
                 System.out.println ("Tableau une fois trié :");
                 affichage  ( );
                 break;
-            case 2022:
+            case "2022":
                 long tempsDebut, tempsFin;
                 double seconds;
 
@@ -299,7 +308,7 @@ public class ImplementationJavaAlgorithmesTris
 
                 break;
             default:
-                System.out.println("Le numero saisi n'est pas valide");
+                System.out.println("La valeur saisi n'est pas valide.");
                 break;
         }
     }
