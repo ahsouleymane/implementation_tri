@@ -148,7 +148,7 @@ public class ImplementationJavaAlgorithmesTris
     }
     /* ########## TRI SELECTION ########## */
 
-    public static void triSelection()
+    static void triSelection()
     {
         for (int i = 0; i < table.length - 1; i++)
         {
