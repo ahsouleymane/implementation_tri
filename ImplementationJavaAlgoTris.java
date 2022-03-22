@@ -3,9 +3,7 @@ import java.util.Scanner;
 public class ImplementationJavaAlgorithmesTris
 {
     static  float [] table  =  new  float [10000]  ;  // le tableau à trier en attribut
- /*  Les cellules [0] et [20] contiennent des sentinelles,
-     Les cellules utiles vont de 1 è 19, (de 1 à table.length-2)
- */
+
 
     static void  affichage  ( )
     {
