@@ -7,7 +7,6 @@ public class ImplementationJavaAlgorithmesTris
 
     static void  affichage  ( )
     {
-        // Affichage sans les sentinelles
         int  n  =  table.length - 2 ;
         for (  int  i  =  1 ;  i <= n ;  i ++ )
             System.out.print ( table[i] + " , ");
